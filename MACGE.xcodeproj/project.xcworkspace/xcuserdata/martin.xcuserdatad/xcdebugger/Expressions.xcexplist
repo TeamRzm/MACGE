@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ACGE_FandeLabel getLinesArrContentString:]:ACGE_FandeLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ACGE_FandeLabel reDrawSubLabels]:ACGE_FandeLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(CFTextAttachment*)0x6080000a57c0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MXAE_Controller removeSourceWithIdentifier:]:MXAE_Controller.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "sourcerArr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[CFTextModel CreateGIFAttributedStringWithContentStr:]:CFTextModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "gifImg">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MACGE_GUI_ImageView_SetFrame:MACGE_GUI_ImageView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(void**)s">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MACGE_GUI_ImageView_Create:MACGE_GUI_ImageView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(id)p">
+            </PersistentString>
+            <PersistentString
+               value = "(UIImageView*)0x600000242098">
+            </PersistentString>
+            <PersistentString
+               value = "(*((void*)0x000060000005bbc8))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
