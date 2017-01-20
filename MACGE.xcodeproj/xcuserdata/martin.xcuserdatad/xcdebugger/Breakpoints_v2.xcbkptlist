@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MACGE/Classes/MACGE_GUI_ImageView.m"
-            timestampString = "505996775.595868"
+            timestampString = "506573130.880773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "MACGE_GUI_ImageView_Destory()"
             landmarkType = "9">
          </BreakpointContent>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MACGE/Classes/MACGE_GUI_View.m"
-            timestampString = "505996779.716822"
+            filePath = "MACGE/Classes/MACGE_GUI_Button.m"
+            timestampString = "506572196.836008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "MACGE_GUI_View_Destory()"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "MACGE_GUI_Button_SetEvent()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,14 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MACGE/Lib/MXAE/MXAE_Controller.m"
-            timestampString = "505997591.421785"
+            filePath = "MACGE/Classes/MACGE_GUI_Button.m"
+            timestampString = "506572453.691725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-DestroyController"
-            landmarkType = "7">
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "MACGE_GUI_Button_SetEvent()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,14 +73,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MACGE/Lib/MXAE/MXAE_Controller.m"
-            timestampString = "505997527.419609"
+            filePath = "MACGE/Classes/MACGE_GUI_Button.m"
+            timestampString = "506572694.697443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-DestroyController"
-            landmarkType = "7">
+            startingLineNumber = "238"
+            endingLineNumber = "238">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -26,6 +26,10 @@ static int MACGE_GUI_View_Create(lua_State *L)
     
     UIView *newOCObject = [[UIView alloc] init];
     
+    newOCObject.layer.masksToBounds = YES;
+    
+    newOCObject.userInteractionEnabled = YES;
+    
     *p = (__bridge void *)(newOCObject);
     
     luaL_getmetatable(L, "MUI_View.Create");

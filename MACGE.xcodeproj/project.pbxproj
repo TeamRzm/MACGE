@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1D44281E319F6F00E1DDA3 /* MACGE_GUI_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */; };
 		5B3986F81E2782D800494E42 /* ACGE_ResHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3986F71E2782D800494E42 /* ACGE_ResHelper.m */; };
 		5B3987241E27857900494E42 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B3987011E27857900494E42 /* aescrypt.c */; };
 		5B3987251E27857900494E42 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B3987021E27857900494E42 /* aeskey.c */; };
@@ -257,6 +258,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Button.m; path = Classes/MACGE_GUI_Button.m; sourceTree = "<group>"; };
 		5B3986F61E2782D800494E42 /* ACGE_ResHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACGE_ResHelper.h; path = HostInterface/ACGE_ResHelper.h; sourceTree = "<group>"; };
 		5B3986F71E2782D800494E42 /* ACGE_ResHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACGE_ResHelper.m; path = HostInterface/ACGE_ResHelper.m; sourceTree = "<group>"; };
 		5B3986FF1E27857900494E42 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 				5B8104F11E28D055006812C2 /* MACGE_GUI_View.m */,
 				5B8104E01E286CC0006812C2 /* MACGE_GUI_ImageView.m */,
 				5B8104F41E28D30B006812C2 /* MACGE_GUI_TextField.m */,
+				5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1309,6 +1312,7 @@
 				5BFFA9421E24FFFE00ECF850 /* NSData+ImageContentType.m in Sources */,
 				5B3987241E27857900494E42 /* aescrypt.c in Sources */,
 				5B63B2D71E0BB90F0006BDCB /* ACGE_Actor.m in Sources */,
+				5B1D44281E319F6F00E1DDA3 /* MACGE_GUI_Button.m in Sources */,
 				5BFFA9471E24FFFE00ECF850 /* SDWebImageDownloaderOperation.m in Sources */,
 				5B3987301E27857900494E42 /* unzip.c in Sources */,
 				5B39872C1E27857900494E42 /* sha1.c in Sources */,

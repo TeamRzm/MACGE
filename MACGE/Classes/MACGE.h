@@ -10,6 +10,8 @@
 
 #import "ACGE_ResHelper.h"
 
+typedef void(^MACGE_SIMPLE_BLOCK)(void);
+
 typedef NS_ENUM(NSUInteger, MACGE_EVENT) {
     MACGE_EVENT_TOUCH_SCREEN,
 };

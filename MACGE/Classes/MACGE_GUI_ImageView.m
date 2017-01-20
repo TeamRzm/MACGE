@@ -27,6 +27,8 @@ static int MACGE_GUI_ImageView_Create(lua_State *L)
     
     UIImageView *newOCObject = [[UIImageView alloc] init];
     
+    newOCObject.userInteractionEnabled = YES;
+    
     *p = (__bridge void *)(newOCObject);
     
     luaL_getmetatable(L, "MUI_ImageView.Create");

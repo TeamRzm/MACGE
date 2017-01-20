@@ -26,6 +26,7 @@ extern int MACGE_Open_GUI_ScreenLib(lua_State* L);
 extern int MACGE_Open_GUI_ViewLib(lua_State* L);
 extern int MACGE_Open_GUI_TextFieldLib(lua_State* L);
 extern int MACGE_Open_GUI_ViewLib(lua_State* L);
+extern int MACGE_Open_GUI_ButtonLib(lua_State* L);
 
 @interface MACGE()
 {
@@ -148,6 +149,7 @@ extern int MACGE_Open_GUI_ViewLib(lua_State* L);
     MACGE_Open_GUI_ViewLib(self.LMachine);
     MACGE_Open_GUI_TextFieldLib(self.LMachine);
     MACGE_Open_GUI_ViewLib(self.LMachine);
+    MACGE_Open_GUI_ButtonLib(self.LMachine);
 }
 
 
