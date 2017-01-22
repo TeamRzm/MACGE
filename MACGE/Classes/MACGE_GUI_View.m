@@ -111,11 +111,42 @@ static int MACGE_GUI_View_SetBackGoundColor(lua_State *L)
     return 0;
 }
 
+static int MACGE_GUI_View_AddAnimation(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    POID s = lua_touserdata(L, 2);
+    
+    NSString *anmKey = NStr(luaL_checkstring(L, 3));
+    
+    CABasicAnimation *layAnimtion = (__bridge CABasicAnimation *)(*s);
+    
+    [shareScreenView.layer addAnimation:layAnimtion forKey:anmKey];
+    
+    return 0;
+}
+
+static int MACGE_GUI_View_RemoveAnimation(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    NSString *anmKey = NStr(luaL_checkstring(L, 2));
+    
+    [shareScreenView.layer removeAnimationForKey:anmKey];
+    
+    return 0;
+}
+
 static const struct luaL_Reg MACGE_GUI_View_m [] = {
+    
     {kMUI_SetFrame,             MACGE_GUI_View_SetFrame},
     {kMUI_GetFrame,             MACGE_GUI_View_GetFrame},
     {kMUI_AddSubview,           MACGE_GUI_View_AddSubView},
     {kMUI_SetBackGoundColor,    MACGE_GUI_View_SetBackGoundColor},
+    
+    {kMUI_AddAnimation,         MACGE_GUI_View_AddAnimation},
+    {kMUI_RemoveAnimation,      MACGE_GUI_View_RemoveAnimation},
+    
     {"__gc",                    MACGE_GUI_View_Destory},
     {NULL, NULL}
 };

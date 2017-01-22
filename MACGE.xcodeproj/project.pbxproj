@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B05B70B1E349D3B00497C7C /* MACGE_GUI_Point3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B05B70A1E349D3B00497C7C /* MACGE_GUI_Point3D.m */; };
 		5B1D44281E319F6F00E1DDA3 /* MACGE_GUI_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */; };
 		5B1D44311E31B73F00E1DDA3 /* MACGE_GUI_Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44301E31B73F00E1DDA3 /* MACGE_GUI_Animation.m */; };
 		5B1D44341E31B92300E1DDA3 /* MACGE_GUI_Point.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44331E31B92300E1DDA3 /* MACGE_GUI_Point.m */; };
@@ -262,6 +263,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B05B70A1E349D3B00497C7C /* MACGE_GUI_Point3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Point3D.m; path = Classes/MACGE_GUI_Point3D.m; sourceTree = "<group>"; };
 		5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Button.m; path = Classes/MACGE_GUI_Button.m; sourceTree = "<group>"; };
 		5B1D44301E31B73F00E1DDA3 /* MACGE_GUI_Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Animation.m; path = Classes/MACGE_GUI_Animation.m; sourceTree = "<group>"; };
 		5B1D44331E31B92300E1DDA3 /* MACGE_GUI_Point.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Point.m; path = Classes/MACGE_GUI_Point.m; sourceTree = "<group>"; };
@@ -757,6 +759,7 @@
 				5B8104E01E286CC0006812C2 /* MACGE_GUI_ImageView.m */,
 				5B1D44301E31B73F00E1DDA3 /* MACGE_GUI_Animation.m */,
 				5B1D44331E31B92300E1DDA3 /* MACGE_GUI_Point.m */,
+				5B05B70A1E349D3B00497C7C /* MACGE_GUI_Point3D.m */,
 				5B1D44361E31BB7900E1DDA3 /* MACGE_GUI_Size.m */,
 				5B1D44391E31BCA900E1DDA3 /* MACGE_GUI_Rect.m */,
 			);
@@ -1292,6 +1295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B1D443A1E31BCA900E1DDA3 /* MACGE_GUI_Rect.m in Sources */,
+				5B05B70B1E349D3B00497C7C /* MACGE_GUI_Point3D.m in Sources */,
 				5B63B2B91E0B813A0006BDCB /* MXAE_Controller.m in Sources */,
 				5BFFA9481E24FFFE00ECF850 /* SDWebImageManager.m in Sources */,
 				5BFFA9441E24FFFE00ECF850 /* SDWebImageCompat.m in Sources */,

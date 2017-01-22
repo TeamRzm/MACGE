@@ -26,7 +26,7 @@ static int MACGE_GUI_Size_Create(lua_State *L)
     
     *((CGSize*)p) = CGSizeMake(0, 0);
     
-    luaL_getmetatable(L, "MACGE_GUI_Size_Create");
+    luaL_getmetatable(L, "MUI_Size.Create");
     
     lua_setmetatable(L, -2);
     
@@ -35,7 +35,7 @@ static int MACGE_GUI_Size_Create(lua_State *L)
 
 static int MACGE_GUI_Size_Destory(lua_State *L)
 {
-    void* p = (void*)lua_touserdata(L, 1);
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Size.Create");
     
     free(p);
     
@@ -46,7 +46,7 @@ static int MACGE_GUI_Size_Destory(lua_State *L)
 
 static int MACGE_GUI_Size_SetW(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGSize));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Size.Create");
     
     float w = luaL_checknumber(L, 2);
     
@@ -57,7 +57,7 @@ static int MACGE_GUI_Size_SetW(lua_State *L)
 
 static int MACGE_GUI_Size_GetW(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGSize));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Size.Create");
     
     lua_pushnumber(L, ((CGSize*)p)->width);
     
@@ -66,7 +66,7 @@ static int MACGE_GUI_Size_GetW(lua_State *L)
 
 static int MACGE_GUI_Size_SetH(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGSize));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Size.Create");
     
     float h = luaL_checknumber(L, 2);
     
@@ -77,7 +77,7 @@ static int MACGE_GUI_Size_SetH(lua_State *L)
 
 static int MACGE_GUI_Size_GetH(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGSize));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Size.Create");
     
     lua_pushnumber(L, ((CGSize*)p)->height);
     

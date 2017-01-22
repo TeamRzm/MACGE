@@ -35,7 +35,7 @@ static int MACGE_GUI_Rect_Create(lua_State *L)
 
 static int MACGE_GUI_Rect_Destory(lua_State *L)
 {
-    void* p = (void*)lua_touserdata(L, 1);
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Rect.Create");
     
     free(p);
     

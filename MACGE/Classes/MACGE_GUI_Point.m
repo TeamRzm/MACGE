@@ -26,7 +26,7 @@ static int MACGE_GUI_Point_Create(lua_State *L)
     
     *((CGPoint*)p) = CGPointMake(0,0);
     
-    luaL_getmetatable(L, "MACGE_GUI_Point_Create");
+    luaL_getmetatable(L, "MUI_Point.Create");
     
     lua_setmetatable(L, -2);
     
@@ -35,7 +35,7 @@ static int MACGE_GUI_Point_Create(lua_State *L)
 
 static int MACGE_GUI_Point_Destory(lua_State *L)
 {
-    void* p = (void*)lua_touserdata(L, 1);
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Point.Create");
     
     free(p);
     
@@ -46,7 +46,7 @@ static int MACGE_GUI_Point_Destory(lua_State *L)
 
 static int MACGE_GUI_Point_SetX(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGPoint));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Point.Create");
     
     float x = luaL_checknumber(L, 2);
     
@@ -57,7 +57,7 @@ static int MACGE_GUI_Point_SetX(lua_State *L)
 
 static int MACGE_GUI_Point_GetX(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGPoint));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Point.Create");
     
     lua_pushnumber(L, ((CGPoint*)p)->x);
     
@@ -66,7 +66,7 @@ static int MACGE_GUI_Point_GetX(lua_State *L)
 
 static int MACGE_GUI_Point_SetY(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGPoint));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Point.Create");
     
     float y = luaL_checknumber(L, 2);
     
@@ -77,7 +77,7 @@ static int MACGE_GUI_Point_SetY(lua_State *L)
 
 static int MACGE_GUI_Point_GetY(lua_State *L)
 {
-    void* p = (void*)lua_newuserdata(L, sizeof(CGPoint));
+    void *p = (void *)luaL_checkudata(L, 1, "MUI_Point.Create");
     
     lua_pushnumber(L, ((CGPoint*)p)->y);
     
@@ -91,7 +91,7 @@ static const struct luaL_Reg MACGE_GUI_Point_m [] = {
     {"SetY",             MACGE_GUI_Point_SetY},
     {"GetY",             MACGE_GUI_Point_GetY},
     
-    {"__gc",                    MACGE_GUI_Point_Destory},
+    {"__gc",             MACGE_GUI_Point_Destory},
     {NULL, NULL}
 };
 

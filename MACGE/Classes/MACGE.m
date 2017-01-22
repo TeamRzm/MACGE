@@ -30,6 +30,7 @@ extern int MACGE_Open_GUI_ButtonLib(lua_State* L);
 extern int MACGE_Open_GUI_PointLib(lua_State* L);
 extern int MACGE_Open_GUI_SizeLib(lua_State* L);
 extern int MACGE_Open_GUI_RectLib(lua_State* L);
+extern int MACGE_Open_GUI_AnimationLib(lua_State* L);
 
 @interface MACGE()
 {
@@ -161,6 +162,7 @@ extern int MACGE_Open_GUI_RectLib(lua_State* L);
     MACGE_Open_GUI_PointLib(self.LMachine);
     MACGE_Open_GUI_SizeLib(self.LMachine);
     MACGE_Open_GUI_RectLib(self.LMachine);
+    MACGE_Open_GUI_AnimationLib(self.LMachine);
 }
 
 

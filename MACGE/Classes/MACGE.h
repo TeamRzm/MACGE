@@ -10,6 +10,12 @@
 
 #import "ACGE_ResHelper.h"
 
+typedef struct {
+    CGFloat x;
+    CGFloat y;
+    CGFloat z;
+}Point3D;
+
 typedef void(^MACGE_SIMPLE_BLOCK)(void);
 
 typedef NS_ENUM(NSUInteger, MACGE_EVENT) {

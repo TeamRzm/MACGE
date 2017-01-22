@@ -39,3 +39,5 @@ id lual_checkObjectiveID(lua_State *L, int i, const char type[]);
 #define kMUI_SetFrame                   "SetFrame"
 #define kMUI_GetFrame                   "GetFrame"
 #define kMUI_SetBackGoundColor          "SetBackGoundColor"
+#define kMUI_AddAnimation               "AddAnimation"
+#define kMUI_RemoveAnimation            "RemoveAnimation"

@@ -128,6 +128,7 @@ static int MACGE_GUI_TextField_GetText(lua_State *L)
     return 1;
 }
 
+
 static int MACGE_GUI_TextField_SetFontSize(lua_State *L)
 {
     UITextField *view = (UITextField*)lual_checkObjectiveID(L, 1, "MUI_TextField.Create");
@@ -186,12 +187,41 @@ static int MACGE_GUI_TextField_SetAlignment(lua_State *L)
 }
 
 
+static int MACGE_GUI_TextField_AddAnimation(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    POID s = lua_touserdata(L, 2);
+    
+    NSString *anmKey = NStr(luaL_checkstring(L, 3));
+    
+    CABasicAnimation *layAnimtion = (__bridge CABasicAnimation *)(*s);
+    
+    [shareScreenView.layer addAnimation:layAnimtion forKey:anmKey];
+    
+    return 0;
+}
+
+static int MACGE_GUI_TextField_RemoveAnimation(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    NSString *anmKey = NStr(luaL_checkstring(L, 2));
+    
+    [shareScreenView.layer removeAnimationForKey:anmKey];
+    
+    return 0;
+}
+
 static const struct luaL_Reg MACGE_GUI_TextField_m [] = {
     
     {kMUI_SetFrame,             MACGE_GUI_TextField_SetFrame},
     {kMUI_GetFrame,             MACGE_GUI_TextField_GetFrame},
     {kMUI_AddSubview,           MACGE_GUI_TextField_AddSubView},
     {kMUI_SetBackGoundColor,    MACGE_GUI_TextField_SetBackGoundColor},
+    
+    {kMUI_AddAnimation,         MACGE_GUI_TextField_AddAnimation},
+    {kMUI_RemoveAnimation,      MACGE_GUI_TextField_RemoveAnimation},
     
     {"SetText",                 MACGE_GUI_TextField_SetText},
     {"GetText",                 MACGE_GUI_TextField_GetText},
