@@ -27,6 +27,9 @@ extern int MACGE_Open_GUI_ViewLib(lua_State* L);
 extern int MACGE_Open_GUI_TextFieldLib(lua_State* L);
 extern int MACGE_Open_GUI_ViewLib(lua_State* L);
 extern int MACGE_Open_GUI_ButtonLib(lua_State* L);
+extern int MACGE_Open_GUI_PointLib(lua_State* L);
+extern int MACGE_Open_GUI_SizeLib(lua_State* L);
+extern int MACGE_Open_GUI_RectLib(lua_State* L);
 
 @interface MACGE()
 {
@@ -104,6 +107,11 @@ extern int MACGE_Open_GUI_ButtonLib(lua_State* L);
 
 - (void) reNewLuaMachine
 {
+    if (_LMachine)
+    {
+        lua_close(_LMachine);
+    }
+    
     _LMachine = luaL_newstate();
     
     luaL_openlibs(_LMachine);
@@ -150,6 +158,9 @@ extern int MACGE_Open_GUI_ButtonLib(lua_State* L);
     MACGE_Open_GUI_TextFieldLib(self.LMachine);
     MACGE_Open_GUI_ViewLib(self.LMachine);
     MACGE_Open_GUI_ButtonLib(self.LMachine);
+    MACGE_Open_GUI_PointLib(self.LMachine);
+    MACGE_Open_GUI_SizeLib(self.LMachine);
+    MACGE_Open_GUI_RectLib(self.LMachine);
 }
 
 

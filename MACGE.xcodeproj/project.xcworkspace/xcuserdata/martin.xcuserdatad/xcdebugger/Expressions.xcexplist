@@ -25,6 +25,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "MACGE_GUI_View_GetFrame:MACGE_GUI_View.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "*((CGRect*)(s))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ACGE_FandeLabel getLinesArrContentString:]:ACGE_FandeLabel.m">
          <PersistentStrings>
             <PersistentString
