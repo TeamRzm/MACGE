@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B05B70B1E349D3B00497C7C /* MACGE_GUI_Point3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B05B70A1E349D3B00497C7C /* MACGE_GUI_Point3D.m */; };
+		5B0A403E1E34BD5C00EB3DAD /* ACGE_FullLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A403D1E34BD5C00EB3DAD /* ACGE_FullLineView.m */; };
 		5B1D44281E319F6F00E1DDA3 /* MACGE_GUI_Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */; };
 		5B1D44311E31B73F00E1DDA3 /* MACGE_GUI_Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44301E31B73F00E1DDA3 /* MACGE_GUI_Animation.m */; };
 		5B1D44341E31B92300E1DDA3 /* MACGE_GUI_Point.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D44331E31B92300E1DDA3 /* MACGE_GUI_Point.m */; };
@@ -264,6 +265,8 @@
 
 /* Begin PBXFileReference section */
 		5B05B70A1E349D3B00497C7C /* MACGE_GUI_Point3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Point3D.m; path = Classes/MACGE_GUI_Point3D.m; sourceTree = "<group>"; };
+		5B0A403C1E34BD5C00EB3DAD /* ACGE_FullLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ACGE_FullLineView.h; path = HostInterface/ACGE_FullLineView.h; sourceTree = "<group>"; };
+		5B0A403D1E34BD5C00EB3DAD /* ACGE_FullLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ACGE_FullLineView.m; path = HostInterface/ACGE_FullLineView.m; sourceTree = "<group>"; };
 		5B1D44271E319F6F00E1DDA3 /* MACGE_GUI_Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Button.m; path = Classes/MACGE_GUI_Button.m; sourceTree = "<group>"; };
 		5B1D44301E31B73F00E1DDA3 /* MACGE_GUI_Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Animation.m; path = Classes/MACGE_GUI_Animation.m; sourceTree = "<group>"; };
 		5B1D44331E31B92300E1DDA3 /* MACGE_GUI_Point.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MACGE_GUI_Point.m; path = Classes/MACGE_GUI_Point.m; sourceTree = "<group>"; };
@@ -781,6 +784,8 @@
 				5B77319C1E235EBF0096C690 /* ACGE_SimpleLine.m */,
 				5B7731A01E237A9B0096C690 /* ACGE_FandeLabel.h */,
 				5B7731A11E237A9B0096C690 /* ACGE_FandeLabel.m */,
+				5B0A403C1E34BD5C00EB3DAD /* ACGE_FullLineView.h */,
+				5B0A403D1E34BD5C00EB3DAD /* ACGE_FullLineView.m */,
 			);
 			name = HostInterface;
 			sourceTree = "<group>";
@@ -1351,6 +1356,7 @@
 				5B3987291E27857900494E42 /* hmac.c in Sources */,
 				5B3987251E27857900494E42 /* aeskey.c in Sources */,
 				5B7731A21E237A9B0096C690 /* ACGE_FandeLabel.m in Sources */,
+				5B0A403E1E34BD5C00EB3DAD /* ACGE_FullLineView.m in Sources */,
 				5B63B2CD1E0B94BB0006BDCB /* MACGE_Audio.m in Sources */,
 				5BFFA93E1E24FFFE00ECF850 /* CFTextAttachment.m in Sources */,
 				5B8104F21E28D055006812C2 /* MACGE_GUI_View.m in Sources */,

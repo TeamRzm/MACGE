@@ -10,6 +10,7 @@
 
 @interface CFTextView : UITextView
 
-@property (nonatomic,assign) CGFloat singleLineduartion;
+@property (nonatomic, assign) CGFloat singleLineduartion;
+@property (nonatomic, copy) void (^animationFinishedBlock)();
 
 @end

@@ -33,6 +33,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ACGE_FullLineView lineAnimationStart]:ACGE_FullLineView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.textColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ACGE_FandeLabel getLinesArrContentString:]:ACGE_FandeLabel.m">
          <PersistentStrings>
             <PersistentString

@@ -11,8 +11,9 @@
 #import "MACGE_GUI.h"
 #import "ACGE_Actor.h"
 #import "ACGE_SimpleLine.h"
+#import "ACGE_FullLineView.h"
 
-@interface ACGEDirector()<CAAnimationDelegate>
+@interface ACGEDirector()<CAAnimationDelegate,ACGE_FullLineViewDelegate>
 {
     //Copy Anm Config;
     UIImageView *alphMaskView;
@@ -80,6 +81,40 @@
             self.linesView.alpha = 0.0f;
         }];
     }
+}
+
+- (void) fullLineViewWithContentString : (NSString*) string
+                    singleLineduartion : (CGFloat) lineduartion
+                        backgoundColor : (UIColor*) bgColor
+                              fontSize : (CGFloat) fontSize
+                             textColor : (UIColor*) textColor
+                               bgimg   : (UIImage*) bgimg
+                         textAlignment : (NSTextAlignment) alignment
+{
+    ACGE_FullLineView *fullLineView = [[ACGE_FullLineView alloc] initWithFrame:CGRectMake(0,
+                                                                                          0,
+                                                                                          self.screenView.frame.size.width,
+                                                                                          self.screenView.frame.size.height)];
+    fullLineView.delegate = self;
+    fullLineView.backgroundColor = bgColor;
+    fullLineView.font = [UIFont systemFontOfSize:fontSize];
+    fullLineView.textAlignment = alignment;
+    fullLineView.textColor = textColor;
+    fullLineView.singleLineduartion = lineduartion;
+    fullLineView.text = string;
+    fullLineView.image = bgimg;
+    
+    fullLineView.alpha = 0.0f;
+    
+    [self.screenView addSubview:fullLineView];
+    
+    [UIView animateWithDuration:1.0f animations:^{
+        fullLineView.alpha = 1.0f;
+    } completion:^(BOOL finished) {
+        [fullLineView lineAnimationStart];
+    }];
+    
+    return ;
 }
 
 
@@ -586,6 +621,17 @@
     
     [self.actorInSceneList removeObject:actor];
     
+    return ;
+}
+
+#pragma mark FullLineViewDelegate
+- (void)fullLineViewDidEndAnimation:(ACGE_FullLineView *)lineView
+{
+    return ;
+}
+
+- (void) fullLineViewDidTapAnimationoView:(ACGE_FullLineView *)lineView
+{
     return ;
 }
 

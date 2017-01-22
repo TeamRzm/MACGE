@@ -63,6 +63,14 @@
                          }
                          completion:^(BOOL finished){
                              
+                             if ( subRect == arrar.lastObject )
+                             {
+                                 if (self.animationFinishedBlock)
+                                 {
+                                     self.animationFinishedBlock();
+                                 }
+                             }
+                             
                          }];
         
         delaySum += currentAnmDuration;
