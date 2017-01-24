@@ -90,7 +90,7 @@ static int MACGE_GUI_Screen_SetBackGoundColor(lua_State *L)
 
 static int MACGE_GUI_Screen_AddAnimation(lua_State *L)
 {
-    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Screen.ShareInstance");
     
     POID s = lua_touserdata(L, 2);
     
@@ -105,7 +105,7 @@ static int MACGE_GUI_Screen_AddAnimation(lua_State *L)
 
 static int MACGE_GUI_Screen_RemoveAnimation(lua_State *L)
 {
-    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Screen.ShareInstance");
     
     NSString *anmKey = NStr(luaL_checkstring(L, 2));
     

@@ -237,7 +237,7 @@ static int MACGE_GUI_Button_SetEvent(lua_State *L)
 
 static int MACGE_GUI_Button_AddAnimation(lua_State *L)
 {
-    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Button.Create");
     
     POID s = lua_touserdata(L, 2);
     
@@ -252,7 +252,7 @@ static int MACGE_GUI_Button_AddAnimation(lua_State *L)
 
 static int MACGE_GUI_Button_RemoveAnimation(lua_State *L)
 {
-    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Button.Create");
     
     NSString *anmKey = NStr(luaL_checkstring(L, 2));
     

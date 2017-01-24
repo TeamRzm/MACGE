@@ -28,7 +28,7 @@ static int MACGE_GUI_Animation_CreateForKey(lua_State *L)
     //id**
     POID p = (void**)lua_newuserdata(L, sizeof(POID));
     
-    NSString *keyPath = NStr(luaL_checkstring(L, 2));
+    NSString *keyPath = NStr(luaL_checkstring(L, 1));
     
     NSString *animationKey = MACGE_GUI_ANIMATION_KEYMAP[keyPath];
     
@@ -152,7 +152,7 @@ int private_OPEN_MACGE_GUI_Animation(lua_State* L)
 
 int MACGE_Open_GUI_AnimationLib(lua_State* L)
 {
-    luaL_requiref(L,"MUI_ImageView", private_OPEN_MACGE_GUI_Animation,1);
+    luaL_requiref(L,"MUI_Animation", private_OPEN_MACGE_GUI_Animation,1);
 
     MACGE_GUI_ANIMATION_KEYMAP = @{
                                    @"MACGE_GUI_ANIMATION_KEY_ROTATION_X"    : @"transform.rotation.x",

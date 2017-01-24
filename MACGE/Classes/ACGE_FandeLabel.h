@@ -10,10 +10,11 @@
 
 @interface ACGE_FandeLabel : UIView
 
-@property (nonatomic, strong) UIColor   *textcolor;
-@property (nonatomic, strong) UIFont    *font;
-@property (nonatomic, strong) NSString  *text;
-@property (nonatomic, assign) CGFloat    linespace;
-@property (nonatomic, assign) NSTimeInterval singleLineduartion;
+@property (nonatomic, strong) UIColor           *textcolor;
+@property (nonatomic, strong) UIFont            *font;
+@property (nonatomic, strong) NSString          *text;
+@property (nonatomic, assign) CGFloat           linespace;
+@property (nonatomic, assign) NSTextAlignment   textAlignment;
+@property (nonatomic, assign) NSTimeInterval    singleLineduartion;
 
 @end

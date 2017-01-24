@@ -9,45 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MACGE/Classes/MACGE_GUI_TextField.m"
-            timestampString = "505996777.167702"
+            filePath = "MACGE/Classes/MACGE_Lines.m"
+            timestampString = "506930590.643436"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "MACGE_GUI_TextField_Destory()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MACGE/Classes/MACGE_GUI_Button.m"
-            timestampString = "506572196.836008"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "MACGE_GUI_Button_SetEvent()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MACGE/Classes/MACGE_GUI_Button.m"
-            timestampString = "506572453.691725"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "MACGE_GUI_Button_SetEvent()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "MACGE_Lines_FullLinesWithAllParmas()"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

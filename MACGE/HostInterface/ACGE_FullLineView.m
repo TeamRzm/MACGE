@@ -7,15 +7,15 @@
 //
 
 #import "ACGE_FullLineView.h"
-#import "CFTextView.h"
+#import "ACGE_FandeLabel.h"
 
 @interface ACGE_FullLineView()
 {
     
 }
 
-@property (nonatomic, strong) UIImageView   *backgoundImageView;
-@property (nonatomic, strong) CFTextView    *contentTextView;
+@property (nonatomic, strong) UIImageView       *backgoundImageView;
+@property (nonatomic, strong) ACGE_FandeLabel   *contentTextView;
 
 @end
 
@@ -31,35 +31,43 @@
         self.backgroundColor = [UIColor blackColor];
         
         self.backgoundImageView.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
-        self.contentTextView.frame = CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame));
+        self.contentTextView.frame = CGRectMake(100, 100, CGRectGetWidth(frame) - 200, CGRectGetHeight(frame) - 200);
         
         [self addSubview:self.backgoundImageView];
         [self addSubview:self.contentTextView];
+        
+        UITapGestureRecognizer *tapHide = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToHide)];
+        [self addGestureRecognizer:tapHide];
     }
     
     return self;
 }
 
+- (void) tapToHide
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(fullLineViewDidEndAnimation:)] )
+    {
+        [self.delegate fullLineViewDidTapAnimationoView:self];
+    }
+}
+
 - (void) lineAnimationStart
 {
-    __weak typeof(self) weakSelf = self;
-    
-    [self.contentTextView setAnimationFinishedBlock:^{
-        
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(fullLineViewDidEndAnimation:)] )
-        {
-            [weakSelf.delegate fullLineViewDidEndAnimation:weakSelf];
-        }
-        
-    }];
-    
-    NSDictionary *contentFormatDict = @{
-                                        NSFontAttributeName : self.font,
-                                        NSForegroundColorAttributeName : self.textColor,
-                                        };
-    
-    _contentTextView.attributedText = [[NSAttributedString alloc] initWithString:self.text attributes:contentFormatDict];
-    
+//    __weak typeof(self) weakSelf = self;
+//
+//    [self.contentTextView setAnimationFinishedBlock:^{
+//        
+//        weakSelf.userInteractionEnabled = YES;
+//        
+//        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(fullLineViewDidEndAnimation:)] )
+//        {
+//            [weakSelf.delegate fullLineViewDidEndAnimation:weakSelf];
+//        }
+//        
+//    }];
+
+    _contentTextView.text = self.text;
+
     return ;
 }
 
@@ -76,7 +84,7 @@
 {
     _textColor = textColor;
     
-    _contentTextView.textColor = textColor;
+    _contentTextView.textcolor = textColor;
     
     return ;
 }
@@ -118,12 +126,12 @@
     return ;
 }
 
-- (CFTextView*) contentTextView
+- (ACGE_FandeLabel*) contentTextView
 {
     if (!_contentTextView)
     {
-        _contentTextView = [[CFTextView alloc] initWithFrame:CGRectZero];
-        _contentTextView.textColor = [UIColor darkGrayColor];
+        _contentTextView = [[ACGE_FandeLabel alloc] initWithFrame:CGRectZero];
+        _contentTextView.textcolor = [UIColor darkGrayColor];
         _contentTextView.font = [UIFont systemFontOfSize:16];
         _contentTextView.backgroundColor = [UIColor clearColor];
         _contentTextView.singleLineduartion = .3f;

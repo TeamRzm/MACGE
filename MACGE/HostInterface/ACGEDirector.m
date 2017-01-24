@@ -632,6 +632,11 @@
 
 - (void) fullLineViewDidTapAnimationoView:(ACGE_FullLineView *)lineView
 {
+    [UIView animateWithDuration:.25f animations:^{
+        lineView.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        [lineView removeFromSuperview];
+    }];
     return ;
 }
 

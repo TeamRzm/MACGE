@@ -15,7 +15,7 @@
 
 @interface ACGE_FandeLabel()
 
-@property (nonatomic, strong) NSMutableArray<CFTextView*>      *subLabels;
+@property (nonatomic, strong) NSMutableArray<UILabel*>      *subLabels;
 
 @end
 
@@ -87,12 +87,13 @@
     {
         NSAttributedString *attText = [[NSAttributedString alloc] initWithString:comStrArr[i] attributes:subLabelAttrFormat];
         
-        CGSize singleLineSize = [attText boundingRectWithSize:CGSizeMake(self.frame.size.width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
+        CGSize singleLineSize = [@"Singline" sizeWithAttributes:subLabelAttrFormat];
+        
         CGFloat singleLineHeihgt = singleLineSize.height;
         
-        CFTextView *subLineLabel = [[CFTextView alloc] initWithFrame:CGRectMake(0, i * (singleLineHeihgt + self.linespace) + self.linespace, singleLineSize.width, singleLineHeihgt)];
+        UILabel *subLineLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, i * (singleLineHeihgt + self.linespace) + self.linespace, self.frame.size.width, singleLineHeihgt)];
         
-        subLineLabel.attributedText = [CFTextModel CreateGIFAttributedStringWithContentStr:attText];
+        subLineLabel.attributedText = attText;
         
         [self.subLabels addObject:subLineLabel];
 
