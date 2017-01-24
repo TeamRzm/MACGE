@@ -35,6 +35,8 @@ id lual_checkObjectiveID(lua_State *L, int i, const char type[]);
 
 //成员属性名称，防治写错或者弄错大小写
 #define kMUI_AddSubview                 "AddSubview"
+#define kMUI_Removeview                 "RemoveView"
+#define KMUI_ClearView                  "ClearView"
 #define kMUI_SetImage                   "SetImage"
 #define kMUI_SetFrame                   "SetFrame"
 #define kMUI_GetFrame                   "GetFrame"

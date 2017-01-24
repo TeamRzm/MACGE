@@ -87,7 +87,7 @@
         _listmap = [[NSMutableDictionary alloc] init];
         
         _listmap[@"Test Script"] = @"/Users/martin/Desktop/SceneStart/";
-        _listmap[@"StartScene"] = @"/Users/martin/Desktop/GameScript/Scene_Start/";
+        _listmap[@"StartScene"] = @"/Users/martin/Desktop/GameScript/";
     }
     
     return _listmap;

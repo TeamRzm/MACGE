@@ -40,7 +40,13 @@
 
 - (void) deletePoid : (POID) poidPoint
 {
-    [self.POIDList removeObject:(__bridge id _Nonnull)(*poidPoint)];
+    if (poidPoint)
+    {
+        if ([self.POIDList containsObject:(__bridge id _Nonnull)(*poidPoint)] && (__bridge id _Nonnull)(*poidPoint))
+        {
+            [self.POIDList removeObject:(__bridge id _Nonnull)(*poidPoint)];
+        }
+    }
     
     return ;
 }

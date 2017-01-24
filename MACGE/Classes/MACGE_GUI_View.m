@@ -137,12 +137,35 @@ static int MACGE_GUI_View_RemoveAnimation(lua_State *L)
     return 0;
 }
 
+static int MACGE_GUI_View_RemovefromSuperview(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    [shareScreenView removeFromSuperview];
+    
+    return 0;
+}
+
+static int MACGE_GUI_View_ClearView(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_View.Create");
+    
+    for (UIView *subView in shareScreenView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
+    return 0;
+}
+
 static const struct luaL_Reg MACGE_GUI_View_m [] = {
     
     {kMUI_SetFrame,             MACGE_GUI_View_SetFrame},
     {kMUI_GetFrame,             MACGE_GUI_View_GetFrame},
     {kMUI_AddSubview,           MACGE_GUI_View_AddSubView},
     {kMUI_SetBackGoundColor,    MACGE_GUI_View_SetBackGoundColor},
+    {KMUI_ClearView,            MACGE_GUI_View_ClearView},
+    {kMUI_Removeview,           MACGE_GUI_View_RemovefromSuperview},
     
     {kMUI_AddAnimation,         MACGE_GUI_View_AddAnimation},
     {kMUI_RemoveAnimation,      MACGE_GUI_View_RemoveAnimation},

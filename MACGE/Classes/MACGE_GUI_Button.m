@@ -261,11 +261,34 @@ static int MACGE_GUI_Button_RemoveAnimation(lua_State *L)
     return 0;
 }
 
+static int MACGE_GUI_Button_RemovefromSuperview(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Button.Create");
+    
+    [shareScreenView removeFromSuperview];
+    
+    return 0;
+}
+
+static int MACGE_GUI_Button_ClearView(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_Button.Create");
+    
+    for (UIView *subView in shareScreenView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
+    return 0;
+}
+
 static const struct luaL_Reg MACGE_GUI_Button_m [] = {
     
     {kMUI_SetFrame,             MACGE_GUI_Button_SetFrame},
     {kMUI_GetFrame,             MACGE_GUI_Button_GetFrame},
     {kMUI_AddSubview,           MACGE_GUI_Button_AddSubView},
+    {kMUI_Removeview,           MACGE_GUI_Button_RemovefromSuperview},
+    {KMUI_ClearView,            MACGE_GUI_Button_ClearView},
     {kMUI_SetBackGoundColor,    MACGE_GUI_Button_SetBackGoundColor},
     
     {kMUI_AddAnimation,         MACGE_GUI_Button_AddAnimation},

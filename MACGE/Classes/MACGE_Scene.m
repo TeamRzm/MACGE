@@ -88,10 +88,10 @@ static int MACGE_Scene_Over (lua_State *L)
 }
 
 static luaL_Reg MACGE_Scene_Lib[] = {
-    {"ChangScript",    MACGE_Scene_ChangScript},
-    {"Changed",        MACGE_Scene_Changed},
-    {"ChangedWithMask",MACGE_Scene_ChangedWithMask},
-    {"Over",           MACGE_Scene_Over},
+    {"ChangScript",     MACGE_Scene_ChangScript},
+    {"Changed",         MACGE_Scene_Changed},
+    {"ChangedWithMask", MACGE_Scene_ChangedWithMask},
+    {"Over",            MACGE_Scene_Over},
     {NULL, NULL},
 };
 

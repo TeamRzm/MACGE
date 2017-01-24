@@ -335,6 +335,7 @@
 
 - (void) hideMaskView
 {
+    [[MACGE shareInstance] sendEventToScript:MACGE_EVENT_TOUCH_SCREEN];
     
     if (anmType != MACGE_SCENE_CHANGED_ALPHIM_ANM_NONE)
     {
@@ -632,6 +633,8 @@
 
 - (void) fullLineViewDidTapAnimationoView:(ACGE_FullLineView *)lineView
 {
+    [[MACGE shareInstance] sendEventToScript:MACGE_EVENT_TOUCH_SCREEN];
+    
     [UIView animateWithDuration:.25f animations:^{
         lineView.alpha = 0.0f;
     } completion:^(BOOL finished) {

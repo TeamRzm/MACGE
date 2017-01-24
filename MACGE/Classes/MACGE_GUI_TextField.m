@@ -213,11 +213,35 @@ static int MACGE_GUI_TextField_RemoveAnimation(lua_State *L)
     return 0;
 }
 
+static int MACGE_GUI_TextField_RemovefromSuperview(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_TextField.Create");
+    
+    [shareScreenView removeFromSuperview];
+    
+    return 0;
+}
+
+static int MACGE_GUI_TextField_ClearView(lua_State *L)
+{
+    UIView *shareScreenView = (UIView*)lual_checkObjectiveID(L, 1, "MUI_TextField.Create");
+    
+    for (UIView *subView in shareScreenView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
+    return 0;
+}
+
+
 static const struct luaL_Reg MACGE_GUI_TextField_m [] = {
     
     {kMUI_SetFrame,             MACGE_GUI_TextField_SetFrame},
     {kMUI_GetFrame,             MACGE_GUI_TextField_GetFrame},
     {kMUI_AddSubview,           MACGE_GUI_TextField_AddSubView},
+    {kMUI_Removeview,           MACGE_GUI_TextField_RemovefromSuperview},
+    {KMUI_ClearView,            MACGE_GUI_TextField_ClearView},
     {kMUI_SetBackGoundColor,    MACGE_GUI_TextField_SetBackGoundColor},
     
     {kMUI_AddAnimation,         MACGE_GUI_TextField_AddAnimation},
